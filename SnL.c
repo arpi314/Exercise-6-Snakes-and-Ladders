@@ -318,7 +318,7 @@ void makeSnake(char arr[10][10], struct snakes *Ss){
             Ss->xEnd = (rand()%9);
             Ss->yEnd = (rand()%9);
 
-        }while(Ss->xStart <= Ss->xEnd);
+        }while(Ss->xStart <= Ss->xEnd || Ss->xStart == 0);
 
         //Marker if its okay to continue
         if(Ss->xStart > Ss->xEnd){
@@ -358,7 +358,7 @@ void makeLadder(char arr[10][10], struct ladders *Ll){
             Ll->xEnd = (rand()%9);
             Ll->yEnd = (rand()%9);
             
-        }while(Ll->xStart >= Ll->xEnd);
+        }while(Ll->xStart >= Ll->xEnd || Ll->xStart ==  9);
 
         if(Ll->xStart < Ll->xEnd){
                 ok++;
